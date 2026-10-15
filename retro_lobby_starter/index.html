@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#11111b">
+  <title>Retro Lobby — Private Game Room</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">▣</span> RETRO<span>LOBBY</span></a>
+    <div class="top-status"><i></i> PRIVATE ARCADE <span class="pill">BETA 0.1</span></div>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow">YOUR FRIENDS. YOUR GAMES. YOUR LOBBY.</div>
+      <h1>PRESS START.<br><span>PLAY TOGETHER.</span></h1>
+      <p class="hero-copy">Ruang mabar retro pribadi buat kamu dan temanmu. Siapkan sesi, bagikan undangan, lalu sambungkan game lewat sistem multiplayer yang kompatibel.</p>
+      <div class="hero-actions">
+        <a class="button primary" href="#create-room">＋ BUAT ROOM</a>
+        <a class="button secondary" href="#how-it-works">CARA KERJA ↘</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>01</strong><small>PRIVATE ROOM</small></div>
+        <div><strong>GBA</strong><small>PRIORITAS AWAL</small></div>
+        <div><strong>FREE</strong><small>WEBSITE HOSTING</small></div>
+      </div>
+    </section>
+
+    <section class="layout">
+      <div class="panel main-panel" id="create-room">
+        <div class="panel-head"><div><span class="section-index">01 / LOBBY</span><h2>Buat sesi mabar</h2></div><span class="pixel-icon">▤</span></div>
+        <label for="playerName">NAMA PEMAIN</label>
+        <input id="playerName" maxlength="20" placeholder="Contoh: Bayu" autocomplete="nickname">
+        <label for="gameSelect">PILIH GAME</label>
+        <select id="gameSelect">
+          <option value="quetzal">Pokémon Quetzal (GBA)</option>
+          <option value="gba">Game GBA lainnya (uji nanti)</option>
+        </select>
+        <label for="sessionMode">MODE SESI</label>
+        <select id="sessionMode">
+          <option value="trade">Trade Pokémon — Trade Center</option>
+          <option value="battle">Battle Pokémon — Colosseum</option>
+          <option value="coop">Co-op / MPlayer</option>
+        </select>
+        <button class="button primary full" id="createButton">GENERATE INVITE CODE ↗</button>
+        <div class="invite-box" id="inviteBox" hidden>
+          <div class="invite-top"><span>LOCAL INVITE PREVIEW</span><span class="pill warning">DEMO</span></div>
+          <div class="invite-code" id="inviteCode">RETRO-0000</div>
+          <p id="inviteDescription">Kode ini hanya contoh undangan dari browser.</p>
+          <button class="button secondary full" id="copyButton">COPY INVITE TEXT</button>
+          <p class="tiny-note">Catatan: kode demo ini belum membuat room online sungguhan dan tidak menghubungkan game secara otomatis.</p>
+        </div>
+      </div>
+
+      <aside class="panel side-panel">
+        <div class="panel-head"><div><span class="section-index">02 / GAME CARD</span><h2>Now loading…</h2></div><span class="live-dot"></span></div>
+        <div class="game-art">
+          <div class="stars">✦ · ✧ · ✦</div>
+          <div class="mon-silhouette">◈</div>
+          <div class="game-label">POKÉMON<br><b>QUETZAL</b></div>
+          <div class="art-footer"><span>GAME BOY ADVANCE</span><span>◆ ◆ ◆</span></div>
+        </div>
+        <div class="game-details">
+          <div><span>PLATFORM</span><b>GBA</b></div>
+          <div><span>MULTIPLAYER</span><b class="green-text">RetroArch Netplay*</b></div>
+          <div><span>STATUS WEBSITE</span><b class="yellow-text">Prototype</b></div>
+        </div>
+        <a class="text-link" href="https://www.pkmnquetzal.top/en/online-tutorial/online-tutorial.html" target="_blank" rel="noopener">BUKA PANDUAN ONLINE QUETZAL ↗</a>
+      </aside>
+    </section>
+
+    <section class="panel steps-panel" id="how-it-works">
+      <div class="panel-head"><div><span class="section-index">03 / QUICK START</span><h2>Cara mulai mabar Quetzal</h2></div><span class="pixel-icon">⌁</span></div>
+      <div class="steps">
+        <article><span class="step-no">01</span><h3>Siapkan game</h3><p>Kedua pemain perlu versi Pokémon Quetzal yang sama dan salinan game/save masing-masing. Jangan bagikan file game berhak cipta secara publik.</p></article>
+        <article><span class="step-no">02</span><h3>Siapkan RetroArch</h3><p>Pasang RetroArch di HP dan PC. Ikuti panduan Quetzal untuk konfigurasi core gpSP, nama pemain, dan Netplay.</p></article>
+        <article><span class="step-no">03</span><h3>Buat sesi Netplay</h3><p>Host aktifkan relay dan password sesuai panduan. Teman mencari room host di RetroArch lalu bergabung.</p></article>
+        <article><span class="step-no">04</span><h3>Masuk ke MPLAYER</h3><p>Di area luar ruangan, buka Start → COOP/MPLAYER → 2J/2P. Untuk tukar pilih Trade Center; untuk bertarung pilih Colosseum.</p></article>
+      </div>
+      <div class="notice"><strong>⚠ Batasan penting:</strong> website ini saat ini hanya prototype lobby. Fitur invite code belum menghubungkan dua perangkat. Multiplayer sungguhan ditangani RetroArch Netplay; kualitas koneksi tergantung jaringan, relay, dan konfigurasi pemain.</div>
+    </section>
+
+    <section class="bottom-grid">
+      <div class="mini-card"><span class="section-index">NEXT UPDATE</span><h3>Room online sungguhan</h3><p>Butuh layanan signaling/room backend dan pengujian koneksi. Hosting halaman gratis tidak otomatis menyediakan server game.</p></div>
+      <div class="mini-card"><span class="section-index">SAVE YOUR PROGRESS</span><h3>Jaga file save</h3><p>Backup save game sebelum pindah emulator. Format save dan lokasi file bisa berbeda antara My Boy! dan RetroArch.</p></div>
+    </section>
+    <footer><span>RETROLOBBY © 2026</span><span>MADE FOR FRIENDS • NOT AFFILIATED WITH POKÉMON</span></footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
